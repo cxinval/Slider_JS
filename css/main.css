@@ -10,6 +10,7 @@ img{
     min-height: 500px;
 }
 .container{
+    position: relative;
     max-width: 717px;
     margin: 0 auto;
     overflow: hidden;
@@ -24,47 +25,48 @@ img{
     position: relative;
     min-width: 717px;
     object-fit: cover;
+    z-index: 1;
     
 }
-.slider-arrow{
-    display: flex;
+.next, .prev{
+    cursor: pointer;
     position: absolute;
-    top: 50%;
-    max-width: 717px;
-    width: 100%;
+    width: 50px;
+    height: 100%;
+    background-color: #fff;
+    opacity: 0.6;
+    z-index: 10;
 }
-.slider-arrow .next{
-    position: absolute;
+.next{
+    top: 0;
     right: 0;
 }
-.arrow{
-    cursor: pointer;
-    fill: red;
-}
-.arrow:hover{
-    cursor: pointer;
-    opacity: 0.6;
+.prev{
+    top: 0;
+    left: 0;
 }
 
 .dots-wrap{
     position: absolute;
     display: flex;
     max-width: 100px;
-    bottom: 40px;
+    bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
+    z-index: 10;
+    
 }
 .dots{
     cursor: pointer;
-    width: 10px;
-    height: 10px;
+    width: 15px;
+    height: 15px;
     border-radius: 50%;
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.6);
     border: 1px solid #000;
 }
 .dots:not(:last-child){
     margin-right: 15px;
 }
 .active{
-    background-color: red;
+    background-color: #fff;
 }

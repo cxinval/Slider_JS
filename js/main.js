@@ -1,12 +1,9 @@
-
-let start = 0;
-const sliderWrap = document.querySelector('.slider-wrap');
-
-document.querySelector('#next').addEventListener('click',function(){  
-    start += 717;
-    if(start > 2868){
-        start = 0;
+let sliderWrap  = document.querySelectorAll(' .slider-wrap .slider-items img');
+current = 0;
+function slider (){
+    for(let i; sliderWrap.length < i; i++){
+        sliderWrap[0].classList.add('active');
     }
-    sliderWrap.style.left = -start + 'px';
-    
-});
+}
+
+document.querySelector('.next').onclick = slider;
