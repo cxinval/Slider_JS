@@ -10,24 +10,26 @@
 </head>
 <main class="main">
     <div class="slider">
-        <div class="slider-wrap">
-            <div class="slider-items">
-                <img src="img/1.jpg" alt="">
-            </div>
-            <div class="slider-items">
-                <img src="img/2.jpg" alt="">
-            </div>
-            <div class="slider-items">
-                <img src="img/3.jpg" alt="">
-            </div>
-            <div class="slider-items">
-                <img src="img/4.jpg" alt="">
-            </div>
-            <div class="slider-items">
-                <img src="img/5.jpg" alt="">
+        <div class="container">
+            <div class="slider-wrap">
+                <div class="slider-items">
+                    <img src="img/1.jpg" alt="">
+                </div>
+                <div class="slider-items">
+                    <img src="img/2.jpg" alt="">
+                </div>
+                <div class="slider-items">
+                    <img src="img/3.jpg" alt="">
+                </div>
+                <div class="slider-items">
+                    <img src="img/4.jpg" alt="">
+                </div>
+                <div class="slider-items">
+                    <img src="img/5.jpg" alt="">
+                </div>
             </div>
             <div class="slider-arrow">
-                <div class="prev prev-left">
+                <div class="prev prev-left" id="prev">
                     <svg class="arrow" version="1.1" id="Ebene_1" xmlns="http://www.w3.org/2000/svg"
                         xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="64px" height="64px"
                         viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve">
@@ -43,7 +45,7 @@
                         </g>
                     </svg>
                 </div>
-                <div class="next next-right">
+                <div class="next next-right" id="next">
                     <svg class="arrow" version="1.1" id="Ebene_1" xmlns="http://www.w3.org/2000/svg"
                         xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="64px" height="64px"
                         viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve">
@@ -60,8 +62,13 @@
                     </svg>
                 </div>
             </div>
+            <div class="dots-wrap">
+                <div class="dots active"></div>
+                <div class="dots"></div>
+                <div class="dots"></div>
+                <div class="dots"></div>
+            </div>
         </div>
-        
         <div class="slider-bulit"></div>
     </div>
 </main>
