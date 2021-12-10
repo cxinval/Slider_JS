@@ -20,23 +20,15 @@ let slider = {
     },
 
 };
-let widths = {
-    1: slider.nameItem.clientWidth = "8000px",
-    2: slider.nameItem.clientWidth = "4263px",
-    3: slider.nameItem.clientWidth = "2924px",
-    4: slider.nameItem.clientWidth = "2175px",
-    5: slider.nameItem.clientWidth = "2175px",
-    6: slider.nameItem.clientWidth = "1727px",
-};
 
 function watch() {
-    slider.nameItem.clientWidth = "4263px";
+    slider.nameItem.classList.add('wight_5')
 }
 
 watch();
 
-a = slider.nameItem
-console.log(a.parentNot);
+
+
 
 next.addEventListener('click', slider.swipeNext);
 prev.addEventListener('click', slider.swipePrev);
