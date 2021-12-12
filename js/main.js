@@ -20,14 +20,25 @@
 //     },
 
 // };
-let a = document.querySelectorAll('.slider-item');
-let b = document.querySelectorAll('.sleder-items')
-c = 0;
-console.log(a);
-for (let i = 0; a.length >= i; i++) {
-    c = c + 1918;
-    b.style.widht = c + "px";
-}
 
 // next.addEventListener('click', slider.swipeNext);
 // prev.addEventListener('click', slider.swipePrev);
+
+
+// Test
+
+let position = 0;
+let slidesToShow = 3;
+let slidesToScroll = 2;
+let sliderWrap = document.querySelector(".slider-wrap");
+let sliderItems = document.querySelector(".slider-items");
+let sliderItem = document.querySelector(".slider-item");
+let next = document.querySelector('.next');
+let prev = document.querySelector('.prev');
+let itemWidth = sliderWrap.clientWidth / slidesToShow;
+
+// Object.entries(sliderItem).forEach((item) => {
+//     console.log(item)
+// })
+
+console.log(typeof sliderItem);
