@@ -7,6 +7,10 @@ body {
     padding: 0;
 }
 
+.main {
+    margin-bottom: 50px;
+}
+
 .slider {
     min-height: 500px;
 }
@@ -72,6 +76,7 @@ body {
 }
 
 .slider .slider-bulit {
+    cursor: pointer;
     width: 10px;
     height: 10px;
     border: 1px solid #000;
