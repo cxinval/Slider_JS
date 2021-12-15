@@ -28,17 +28,49 @@
 // Test
 
 let position = 0;
-let slidesToShow = 3;
-let slidesToScroll = 2;
+let slidesToShow = 2;
+let slidesToScroll = 1;
 let sliderWrap = document.querySelector(".slider-wrap");
 let sliderItems = document.querySelector(".slider-items");
-let sliderItem = document.querySelector(".slider-item");
+let sliderItem = document.querySelectorAll(".slider-item");
 let next = document.querySelector('.next');
 let prev = document.querySelector('.prev');
 let itemWidth = sliderWrap.clientWidth / slidesToShow;
+let movePosition = slidesToScroll * itemWidth;
+let itemCount = sliderItem.length;
 
-// Object.entries(sliderItem).forEach((item) => {
-//     console.log(item)
-// })
+sliderItem.forEach((item) => {
+    item.style.minWidth = itemWidth + "px"
+})
 
-console.log(typeof sliderItem);
+next.addEventListener("click", function() {
+    position -= movePosition
+    setPosition();
+    checkBtn();
+
+})
+prev.addEventListener("click", function() {
+    position += movePosition
+    setPosition();
+    checkBtn();
+
+})
+
+function setPosition() {
+    sliderItems.style.transform = `translateX(${position}px)`;
+}
+
+function checkBtn() {
+    if (position === 0) {
+        prev.style.display = 'none'
+    } else {
+        prev.style.display = 'block'
+    }
+    if (position >= itemCount) {
+        console.log('1')
+            // next.style.display = 'none'
+    } else {
+        console.log('2')
+    }
+}
+checkBtn()
