@@ -33,7 +33,7 @@ let slidesToScroll = 1;
 let sliderWrap = document.querySelector(".slider-wrap");
 let sliderItems = document.querySelector(".slider-items");
 let sliderItem = document.querySelectorAll(".slider-item");
-let bulit = document.querySelector(".slider-bulit")
+let bulit = document.querySelectorAll(".slider-bulit")
 let builds = document.querySelector('.slider-bulits')
 let next = document.querySelector('.next');
 let prev = document.querySelector('.prev');
@@ -41,37 +41,40 @@ let itemWidth = sliderWrap.clientWidth / slidesToShow;
 let movePosition = slidesToScroll * itemWidth;
 let itemCount = sliderItem.length;
 
-
-
 sliderItem.forEach((item) => {
     item.style.minWidth = itemWidth + "px"
 })
 
-bulit.forEach((it) => {
-    it.addEventListener("click", function() {
-        console.log(1);
+
+
+next.addEventListener("click", function() {
+
+    sliderItem.forEach((item, i) => {
+        for (let i = 0; i <= sliderItem.length; i++) {
+            item.id = i
+            console.log(i)
+        }
+
     })
+
+
+    position -= movePosition
+    setPosition();
 })
 
 
-// next.addEventListener("click", function() {
 
-//     position -= movePosition
-//     setPosition();
-//     checkBtn();
-// })
-
-// prev.addEventListener("click", function() {
-//     position += movePosition
-//     setPosition();
-//     checkBtn();
-// })
+prev.addEventListener("click", function() {
+    position += movePosition
+    setPosition();
+    // checkBtn();
+})
 
 
 
-// function setPosition() {
-//     sliderItems.style.transform = `translateX(${position}px)`;
-// }
+function setPosition() {
+    sliderItems.style.transform = `translateX(${position}px)`;
+}
 
 // function checkBtn() {
 //     if (position === 0) {
@@ -79,6 +82,7 @@ bulit.forEach((it) => {
 //     } else {
 //         prev.style.display = 'block'
 //     }
+
 // }
 
 
