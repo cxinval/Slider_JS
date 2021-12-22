@@ -27,6 +27,7 @@
 
 // Test
 
+
 let position = 0;
 let slidesToShow = 2;
 let slidesToScroll = 1;
@@ -41,40 +42,33 @@ let itemWidth = sliderWrap.clientWidth / slidesToShow;
 let movePosition = slidesToScroll * itemWidth;
 let itemCount = sliderItem.length;
 
-sliderItem.forEach((item) => {
-    item.style.minWidth = itemWidth + "px"
-})
 
 
 
-next.addEventListener("click", function() {
+// next.addEventListener("click", function() {
 
-    sliderItem.forEach((item, i) => {
-        for (let i = 0; i <= sliderItem.length; i++) {
-            item.id = i
-            console.log(i)
-        }
+//     sliderItem.forEach((item, i) => {
 
-    })
+//     })
 
 
-    position -= movePosition
-    setPosition();
-})
+//     position -= movePosition
+//     setPosition();
+// })
 
 
 
-prev.addEventListener("click", function() {
-    position += movePosition
-    setPosition();
-    // checkBtn();
-})
+// prev.addEventListener("click", function() {
+//     position += movePosition
+//     setPosition();
+//     // checkBtn();
+// })
 
 
 
-function setPosition() {
-    sliderItems.style.transform = `translateX(${position}px)`;
-}
+// function setPosition() {
+//     sliderItems.style.transform = `translateX(${position}px)`;
+// }
 
 // function checkBtn() {
 //     if (position === 0) {
@@ -87,3 +81,50 @@ function setPosition() {
 
 
 // checkBtn()
+
+let RealSlider = {
+    state: {
+        position: 0,
+        slidesToShow: 2,
+        slidesToScroll: 1,
+    },
+    option: {
+        link: {
+            sliderWrap: document.querySelector(".slider-wrap"),
+            sliderItems: document.querySelector(".slider-items"),
+            sliderItem: document.querySelectorAll(".slider-item"),
+            bulit: document.querySelectorAll(".slider-bulit"),
+            builds: document.querySelector('.slider-bulits'),
+            next: document.querySelector('.next'),
+            prev: document.querySelector('.prev'),
+        },
+        pay: {
+            itemWidth: sliderWrap.clientWidth / slidesToShow,
+            movePosition: slidesToScroll * itemWidth,
+            itemCount: sliderItem.length
+        },
+        buttons: {
+            nextArrow: this.next.addEventListener("click", function() {
+                console.log(1)
+            }),
+            nextArrow: this.prev.addEventListener("click", function() {
+                console.log(2)
+            })
+        },
+        setPosition: this.sliderItem.style.transform = `translateX(${position}px)`
+
+    }
+}
+
+
+
+
+
+// prev.addEventListener("click", function() {
+//     position += movePosition
+//     setPosition();
+//     // checkBtn();
+// })
+// sliderItem.forEach((item) => {
+//     item.style.minWidth = itemWidth + "px"
+// })
