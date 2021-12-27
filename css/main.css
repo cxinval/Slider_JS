@@ -53,6 +53,8 @@ body {
 
 .slider-arrow .prev,
 .slider-arrow .next {
+    border: none;
+    display: block;
     cursor: pointer;
     width: 50px;
     height: 100%;
