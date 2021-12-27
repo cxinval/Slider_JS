@@ -10,9 +10,9 @@
     <title>Слайдер на чистом js</title>
 </head>
 <main class="main">
-    <div class="slider">
+    <div id="slider1" class="slider">
         <div class="slider-wrap">
-            <div class="slider-items" id="slider-items">
+            <div class="slider-items">
                 <div class="slider-item">
                     <img src="img/1.jpg" alt="">
                 </div>
@@ -33,10 +33,53 @@
                 </div>
             </div>
             <div class="slider-arrow">
-                <div class="prev prev-left" id="prev">
+                <button class="prev prev-left"></button>
+                <button class="next next-right"></button>
+            </div>
+            <div class="slider-bulits">
+                <!-- Это кажется излишним. Зачем мы застовляем делать верстку, мы можем этовысчитать -->
+                <div class="slider-bulit active"></div>
+                <div class="slider-bulit"></div>
+                <div class="slider-bulit"></div>
+                <div class="slider-bulit"></div>
+            </div>
+        </div>
+    </div>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <div id="slider2" class="slider">
+        <div class="slider-wrap">
+            <div class="slider-items">
+                <div class="slider-item">
+                    <img src="img/1.jpg" alt="">
+                </div>
+                <div class="slider-item">
+                    <img src="img/2.jpg" alt="">
+                </div>
+                <div class="slider-item">
+                    <img src="img/3.jpg" alt="">
+                </div>
+                <div class="slider-item">
+                    <img src="img/4.jpg" alt="">
+                </div>
+                <div class="slider-item">
+                    <img src="img/5.jpg" alt="">
+                </div>
+                <div class="slider-item">
+                    <img src="img/3.jpg" alt="">
+                </div>
+            </div>
+            <div class="slider-arrow">
+                <div class="prev prev-left">
 
                 </div>
-                <div class="next next-right" id="next">
+                <div class="next next-right">
 
                 </div>
             </div>
@@ -47,8 +90,8 @@
                 <div class="slider-bulit"></div>
             </div>
         </div>
-
     </div>
+
 </main>
 
 
